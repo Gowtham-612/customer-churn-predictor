@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv/
+env/
+venv/
+*.log
+*.db
+instance/
+*.sqlite3
+
+# FastAPI / Uvicorn
+*.pid
+*.json
+*.yaml
+
+# Frontend (React/Vue/Angular)
+node_modules/
+dist/
+build/
+*.lock
+*.log
+.env.local
+.env.development
+.env.production
+
+# Docker
+*.tar
+*.img
+*.container
+*.log
+
+# VSCode / IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dependency folders
+__pypackages__/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+
+# Optional: compiled files
+*.so
+*.dll
+*.exe
+*.out
+*.class
