@@ -8,8 +8,8 @@ from tensorflow.keras.models import load_model
 MODEL_VERSION = "0.0.1"
 
 # Load saved components
-preprocessor = joblib.load("app/models/preprocessor1.joblib")
-model = load_model("app/models/ann_model1.h5")
+preprocessor = joblib.load("models/preprocessor1.joblib")
+model = load_model("models/ann_model1.h5")
 
 
 

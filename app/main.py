@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from app.schema.user_input import CustomerData
-from app.models.predict import predict_churn, MODEL_VERSION
-from app.schema.prediction_response import PredictionResponse
+from schema.user_input import CustomerData
+from models.predict import predict_churn, MODEL_VERSION
+from schema.prediction_response import PredictionResponse
 
 
 app = FastAPI(title="Customer Churn Prediction API")
