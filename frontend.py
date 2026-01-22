@@ -34,7 +34,7 @@ if st.button("Predict Churn"):
     }
 
     try:
-        response = requests.post("http://localhost:8000/predict", json=payload)
+        response = requests.post("https://customer-churn-api.onrender.com/predict", json=payload)
         result = response.json()
 
         if "error" in result:
