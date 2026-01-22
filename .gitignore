@@ -11,7 +11,7 @@ venv/
 *.db
 instance/
 *.sqlite3
-
+Dockerfile
 # FastAPI / Uvicorn
 *.pid
 *.json
