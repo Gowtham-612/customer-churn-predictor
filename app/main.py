@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from schema.user_input import CustomerData
-from models.predict import predict_churn, MODEL_VERSION
-from schema.prediction_response import PredictionResponse
-
+from app.schema.user_input import CustomerData
+from app.models.predict import predict_churn, MODEL_VERSION
+from app.schema.prediction_response import PredictionResponse
+import os
+import uvicorn
 
 app = FastAPI(title="Customer Churn Prediction API")
 
@@ -43,3 +44,10 @@ def churn_prediction(data: CustomerData):
 def health_check():
     return {"status": "API is healthy"
             , "model_version": MODEL_VERSION} 
+
+if __name__ == "__main__":
+    uvicorn.run(
+        "app.main:app",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),
+    )
