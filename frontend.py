@@ -1,5 +1,9 @@
 import streamlit as st
 import requests
+import os
+
+API_URL = os.environ.get("API_URL")
+
 
 st.set_page_config(page_title="Customer Churn Predictor", layout="centered")
 
@@ -34,7 +38,7 @@ if st.button("Predict Churn"):
     }
 
     try:
-        response = requests.post("https://customer-churn-predictor-n61k.onrender.com/predict", json=payload)
+        response = requests.post(API_URL, json=payload)
         result = response.json()
 
         if "error" in result:
